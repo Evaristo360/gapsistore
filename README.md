@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# TEST GAPSI FROND ENT
+## Importante - Crear archivo .env con la información en el directorio principal del proyecto:
+REACT_APP_API_URL=https://axesso-walmart-data-service.p.rapidapi.com/wlm/
+REACT_APP_API_KEY=fce0e15738msh6a87c0c9db9505cp14b74fjsn54bc768f3bc7
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pasos para ejecutar en modo Development
 
-## Available Scripts
+Paso 1 Instalar librerias:
 
-In the project directory, you can run:
+### `npm install`
+
+Paso 2 Ejecutar proyecto:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Se ejecuta el proyecto en modo Development.\
+Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pasos para ejecutar en Prod con PM2
 
+Paso 1 Instalar librerias:
+
+### `npm install`
+
+Paso 2 Construir proyecto:
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye el proyecto en la carpeta `build`.\
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Paso 3 Crear proceso en pm2:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `pm2 serve build <PORT> --spa --name <NOMBRE>`
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Paso 4 Guardar cambios de los procesos pm2:
+### `pm2 save --force`
