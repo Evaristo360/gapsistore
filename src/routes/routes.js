@@ -2,13 +2,14 @@ import {
   BaseLayout
 } from '../layouts';
 import { Error404 } from '../views/Error404';
+import { Cart } from '../views/Cart';
 export const routes = {
   admin: [],
   public: [
     {
       path: '/',
       layout: BaseLayout,
-      component: Error404,
+      component: Cart,
       exact: true,
       titleMessage: 'Gapsi Store'
     },

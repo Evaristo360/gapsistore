@@ -53,14 +53,11 @@ const useApi = ({ endpoint, method }) => {
       setError(null);
 
       const response = await instance[method](url, body);
-      console.log(response);
       if (!ignoreValidation) {
         const headerResponse = _.get(response, 'data');
         const hasError = _.get(response, 'status', 0) !== 200;
 
         const status = _.get(response, 'status', 666);
-
-        console.log(response);
         const message = _.get(headerResponse, 'message', '');
 
         if (hasError) {
